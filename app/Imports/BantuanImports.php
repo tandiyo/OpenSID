@@ -70,7 +70,7 @@ class BantuanImports
             $rand_kartu_peserta = $this->rand_kartu_peserta;
             $daftar_program     = Bantuan::pluck('id')->toArray();
 
-            $data = (new FastExcel())->importSheets($this->path);
+            $data = (new FastExcel)->importSheets($this->path);
 
             foreach ($data as $key => $sheet) {
                 $no_baris  = 0;
